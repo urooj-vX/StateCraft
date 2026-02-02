@@ -215,9 +215,6 @@ export function createCommit(
 export function determineBranchCategory(
   recentElements: Element[],
 ): Branch["category"] {
-  const categories = recentElements.map(
-    (e) => e.category || categorizeElement(e),
-  );
   const names = recentElements.map((e) => e.name.toLowerCase());
 
   // Check for dominant themes
@@ -257,7 +254,7 @@ export function determineBranchCategory(
 // Generate branch name based on category and elements
 export function generateBranchName(
   category: Branch["category"],
-  recentElements: Element[],
+  _recentElements: Element[],
 ): string {
   switch (category) {
     case "volcanic":

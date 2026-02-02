@@ -1,4 +1,3 @@
-import { useGameStore } from "../store/gameStore";
 import { Element } from "../types";
 import { categorizeElement } from "./versionControl";
 
@@ -18,7 +17,7 @@ export class GitCommandParser {
       createBranch: () => void;
       switchBranch: (id: string) => void;
     },
-  ) {}
+  ) { }
 
   parse(command: string): GitCommandResult {
     const cmd = command.trim().toLowerCase();
@@ -256,7 +255,7 @@ export class GitCommandParser {
     };
   }
 
-  private gitDiff(args: string[]): GitCommandResult {
+  private gitDiff(_args: string[]): GitCommandResult {
     const currentCommit = this.versionControl.commits.find(
       (c: any) => c.id === this.versionControl.head,
     );
@@ -406,7 +405,7 @@ export class GitCommandParser {
     };
   }
 
-  private gitPush(args: string[]): GitCommandResult {
+  private gitPush(_args: string[]): GitCommandResult {
     const uncommittedCount = this.library
       .slice(-3)
       .filter((e) => (e as any).category !== "basic").length;
@@ -427,7 +426,7 @@ export class GitCommandParser {
     };
   }
 
-  private gitPull(args: string[]): GitCommandResult {
+  private gitPull(_args: string[]): GitCommandResult {
     // Simulate pulling from a "multiverse repository"
     const isUpToDate = Math.random() > 0.3; // 70% chance of being up to date
 

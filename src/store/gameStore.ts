@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { Element, CanvasItem, VersionControl, Commit, Branch } from "../types";
+import { Element, CanvasItem, VersionControl, Branch } from "../types";
 import { AIHandler } from "../lib/ai";
 import { AIProvider } from "../lib/ai/types";
 import { soundManager } from "../lib/audio";

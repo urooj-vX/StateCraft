@@ -1,5 +1,5 @@
 import { CheckCircle, GitCommit } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 interface CommitNotificationProps {
   message: string;

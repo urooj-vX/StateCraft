@@ -1,4 +1,4 @@
-import { Element } from '../types';
+import { Element } from '../../types';
 
 export interface AIResponse {
   name: string;

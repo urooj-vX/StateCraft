@@ -35,7 +35,6 @@ function getCategoryIcon(category?: ElementCategory) {
 }
 
 function formatTimestamp(timestamp: number): string {
-  const date = new Date(timestamp);
   const now = Date.now();
   const diff = now - timestamp;
 
@@ -60,11 +59,10 @@ function CommitItem({
 
   return (
     <div
-      className={`group p-3 border-l-2 transition-all duration-200 cursor-pointer ${
-        isSelected
+      className={`group p-3 border-l-2 transition-all duration-200 cursor-pointer ${isSelected
           ? "border-blue-500 bg-blue-50 dark:bg-blue-950"
           : "border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
-      }`}
+        }`}
       onClick={onSelect}
     >
       <div className="flex items-start gap-3">
@@ -139,11 +137,10 @@ function BranchItem({
 }) {
   return (
     <div
-      className={`p-2 rounded-md border cursor-pointer transition-all ${
-        isActive
+      className={`p-2 rounded-md border cursor-pointer transition-all ${isActive
           ? "border-blue-500 bg-blue-50 dark:bg-blue-950"
           : "border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
-      }`}
+        }`}
       onClick={onSwitch}
     >
       <div className="flex items-center gap-2">
